@@ -1,0 +1,14 @@
+com/eventapp/MainApplication.java
+ com.eventapp.MainApplication
+ com.eventapp.MainApplication$1
+com/eventapp/ReactNativeFlipper.java
+ com.eventapp.ReactNativeFlipper
+ com.eventapp.ReactNativeFlipper$1
+ com.eventapp.ReactNativeFlipper$2
+ com.eventapp.ReactNativeFlipper$2$1
+com/eventapp/BuildConfig.java
+ com.eventapp.BuildConfig
+com/eventapp/MainActivity.java
+ com.eventapp.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList
