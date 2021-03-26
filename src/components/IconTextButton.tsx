@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import { TouchableOpacity } from "react-native";
 
 import { styled } from "../styles";
@@ -11,7 +11,7 @@ const IconTextButtonStyled = styled(TouchableOpacity)`
 `;
 
 interface IIconTextButtonProps {
-  icon: ReactElement,
+  icon: React.ReactElement,
   text: string,
   onPress: () => void,
 }
