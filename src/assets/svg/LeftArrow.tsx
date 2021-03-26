@@ -4,8 +4,8 @@ import Svg, {Path} from 'react-native-svg'
 export const LeftArrow = (props: any) => {
   return (
     <Svg
-      width={16}
-      height={16}
+      width={24}
+      height={24}
       viewBox="0 0 24 24"
       fill="none"
       stroke="black"
