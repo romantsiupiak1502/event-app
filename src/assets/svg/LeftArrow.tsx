@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, {Path, SvgProps} from 'react-native-svg'
+import Svg, { Path, SvgProps } from 'react-native-svg';
 
 export const LeftArrow = (props: SvgProps) => {
   return (
@@ -16,5 +16,5 @@ export const LeftArrow = (props: SvgProps) => {
     >
       <Path d="M19 12H5M12 19l-7-7 7-7" />
     </Svg>
-  )
+  );
 };

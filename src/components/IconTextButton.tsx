@@ -1,9 +1,9 @@
-import React from "react";
-import { TouchableOpacity } from "react-native";
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
 
-import { styled } from "../styles";
+import { styled } from '../styles';
 
-import { ButtonText } from "./Text";
+import { ButtonText } from './Text';
 
 const IconTextButtonStyled = styled(TouchableOpacity)`
   flex-direction: row;
