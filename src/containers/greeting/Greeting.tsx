@@ -1,13 +1,12 @@
 import React from "react";
-import { ImageBackground, View } from "react-native";
+import { View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 
 import { greetingImage } from "../../assets";
-import { Title, Button } from "../../components";
+import { Title, Button, FlexImageBackground } from '../../components';
 import { theme, styled } from "../../styles";
 
-const WrapperImg = styled(ImageBackground)`
-  flex: 1;
+const Wrapper = styled(FlexImageBackground)`
   justify-content: flex-end;
 `;
 
@@ -42,8 +41,10 @@ interface IGreetingProps {
 }
 
 export const Greeting: React.FC<IGreetingProps> = props => {
+  const { navigation } = props;
+
   return (
-    <WrapperImg source={greetingImage}>
+    <Wrapper source={greetingImage}>
       <Container>
         <ContentContainer>
           <Title text={"Be together, anytime, anywhere"} color={theme.colors.white}/>
@@ -51,17 +52,17 @@ export const Greeting: React.FC<IGreetingProps> = props => {
             <Button
               text="Sign in"
               color={theme.colors.white}
-              onPress={() => props.navigation.navigate("Login")}
+              onPress={() => navigation.navigate("Login")}
             />
             <Button
               text="Sign up"
               color={theme.colors.black}
               backgroundColor={theme.colors.white}
-              onPress={() => props.navigation.navigate("Registration")}
+              onPress={() => navigation.navigate("Registration")}
             />
           </ButtonContainer>
         </ContentContainer>
       </Container>
-    </WrapperImg>
+    </Wrapper>
   );
 };
