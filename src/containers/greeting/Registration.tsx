@@ -3,10 +3,10 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {Formik, Field} from 'formik';
 
 import {theme} from '../../styles';
-import {FlexImageBackground, IconTextButton, Title, InputField, SubmitButton} from '../../components';
-import {loginImage, LeftArrow} from '../../assets';
+import {FlexImageBackground, IconTextButton, Title, InputField, SubmitButton, LeftArrow} from '../../components';
+import {loginImage} from '../../assets';
+import {IStackNavigatorType} from '../../navigation';
 
-import {IStackNavigatorType} from './Greeting';
 import {Container, InputContainer} from './Login';
 
 interface IRegistrationProps {

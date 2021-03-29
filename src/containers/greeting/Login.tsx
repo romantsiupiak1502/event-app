@@ -4,10 +4,9 @@ import {View} from 'react-native';
 import {Formik, Field} from 'formik';
 
 import {styled, theme} from '../../styles';
-import {FlexImageBackground, IconTextButton, Title, InputField, SubmitButton} from '../../components';
-import {loginImage, LeftArrow} from '../../assets';
-
-import {IStackNavigatorType} from './Greeting';
+import {FlexImageBackground, IconTextButton, Title, InputField, SubmitButton, LeftArrow} from '../../components';
+import {loginImage} from '../../assets';
+import {IStackNavigatorType} from '../../navigation';
 
 export const Container = styled(View)`
   align-items: center;

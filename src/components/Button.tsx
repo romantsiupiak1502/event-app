@@ -30,3 +30,20 @@ export const Button: React.FC<IButtonStyledProps> = props => {
     </ButtonStyled>
   );
 };
+
+const SubmitButtonStyled = styled(TouchableOpacity)<IButtonStyledProps>`
+  border-radius: 8px;
+  padding: 8px 24px;
+  margin-top: 16px;
+  align-items: center;
+  background-color: ${ ({ theme }) => theme.colors.primary };
+`;
+
+export const SubmitButton: React.FC<IButtonStyledProps> = props => {
+  const { text, onPress, color } = props;
+  return (
+    <SubmitButtonStyled onPress={onPress} color={''} text={''}>
+      <ButtonText text={text} color={color}/>
+    </SubmitButtonStyled>
+  );
+};

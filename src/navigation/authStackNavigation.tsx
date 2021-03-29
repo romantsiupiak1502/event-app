@@ -7,6 +7,12 @@ import { NavigationConst } from '../constants';
 
 const Stack = createStackNavigator();
 
+export type IStackNavigatorType = {
+  Greeting: undefined,
+  Login: undefined,
+  Registration: undefined,
+};
+
 export const AuthStackNavigation = () => {
   return(
     <NavigationContainer>
@@ -29,4 +35,4 @@ export const AuthStackNavigation = () => {
       </Stack.Navigator>
     </NavigationContainer>
   );
-}
+};

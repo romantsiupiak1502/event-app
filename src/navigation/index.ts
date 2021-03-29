@@ -1,1 +1,1 @@
-export { AuthStackNavigation } from './authStackNavigation';
+export * from './authStackNavigation';
