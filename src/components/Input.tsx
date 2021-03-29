@@ -9,8 +9,9 @@ const TextInputStyled = styled(TextInput)`
   border-radius: 8px;
   border: 1px solid;
   padding-left: 8px;
-  background-color: ${ ({ theme }) => theme.colors.darkPink };
+  background-color: ${ ({ theme }) => theme.colors.gray };
   opacity: 0.8;
+  margin-top: 16px;
   color: ${ ({ theme }) => theme.colors.white }
   font-size: 16px;
 `;

@@ -30,7 +30,7 @@ const ButtonContainer = styled(View)`
   justify-content: space-between;
 `;
 
-type IStackNavigatorType = {
+export type IStackNavigatorType = {
   Greeting: undefined,
   Login: undefined,
   Registration: undefined,
