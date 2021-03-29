@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # CodeStyleProject
-.idea/codeStyles/Project.xml
+.idea/
