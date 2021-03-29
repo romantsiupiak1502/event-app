@@ -4,7 +4,6 @@ import { TextInput } from 'react-native';
 import { styled } from '../styles';
 import { IFormComponent, withFormField } from './withFormField';
 
-
 const TextInputStyled = styled(TextInput)`
   width: 100%;
   border-radius: 8px;

@@ -1,13 +1,12 @@
 import React from "react";
-import { ImageBackground, View } from "react-native";
+import { View } from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
 
 import { greetingImage } from "../../assets";
-import { Title, Button } from "../../components";
+import { Title, Button, FlexImageBackground } from '../../components';
 import { theme, styled } from "../../styles";
 
-const Wrapper = styled(ImageBackground)`
-  flex: 1;
+const Wrapper = styled(FlexImageBackground)`
   justify-content: flex-end;
 `;
 
