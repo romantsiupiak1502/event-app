@@ -31,10 +31,23 @@ export const Title: React.FC<ITextProps> = props => {
   return <TitleText color={color}>{text}</TitleText>
 };
 
-export const ButtonText: React.FC<ITextProps> = props => {
+export const QuaternaryText: React.FC<ITextProps> = props => {
   const { text, color } = props;
   return(
     <ButtonTextStyled color={color}>{text}</ButtonTextStyled>
+  );
+};
+
+const TertiaryTextStyled = styled(Text)<ITextColorProps>`
+  font-size: 24px;
+  color: ${ ({ color, theme }) => color ? color : theme.colors.black }
+`;
+
+export const TertiaryText: React.FC<ITextProps> = props => {
+  const {text, color} = props;
+
+  return (
+      <TertiaryTextStyled color={color}>{text}</TertiaryTextStyled>
   );
 };
 
