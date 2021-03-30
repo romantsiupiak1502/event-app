@@ -1,18 +1,17 @@
-import React from "react";
-import { ImageBackground, View } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
+import React from 'react';
+import {View} from 'react-native';
 
-import { greetingImage } from "../../assets";
-import { Title, Button } from "../../components";
-import { theme, styled } from "../../styles";
+import {greetingImage} from '../../assets';
+import {Title, Button, FlexImageBackground} from '../../components';
+import {theme, styled} from '../../styles';
+import {IStackNavigationProps} from '../../navigation';
 
-const WrapperImg = styled(ImageBackground)`
-  flex: 1;
+const Wrapper = styled(FlexImageBackground)`
   justify-content: flex-end;
 `;
 
 const Container = styled(View)`
-  background-color: ${ ({ theme }) => theme.colors.primary };
+  background-color: ${({theme}) => theme.colors.primary};
   align-items: center;
   flex: 0.3;
   border-top-left-radius: 16px;
@@ -31,37 +30,32 @@ const ButtonContainer = styled(View)`
   justify-content: space-between;
 `;
 
-type IStackNavigatorType = {
-  Greeting: undefined,
-  Login: undefined,
-  Registration: undefined,
-};
-
-interface IGreetingProps {
-  navigation: StackNavigationProp<IStackNavigatorType>;
+interface IGreetingProps extends IStackNavigationProps{
 }
 
 export const Greeting: React.FC<IGreetingProps> = props => {
-  return (
-    <WrapperImg source={greetingImage}>
-      <Container>
-        <ContentContainer>
-          <Title text={"Be together, anytime, anywhere"} color={theme.colors.white}/>
-          <ButtonContainer>
-            <Button
-              text="Sign in"
-              color={theme.colors.white}
-              onPress={() => props.navigation.navigate("Login")}
-            />
-            <Button
-              text="Sign up"
-              color={theme.colors.black}
-              backgroundColor={theme.colors.white}
-              onPress={() => props.navigation.navigate("Registration")}
-            />
-          </ButtonContainer>
-        </ContentContainer>
-      </Container>
-    </WrapperImg>
-  );
+    const {navigation} = props;
+
+    return (
+        <Wrapper source={greetingImage}>
+            <Container>
+                <ContentContainer>
+                    <Title text={"Be together, anytime, anywhere"} color={theme.colors.white}/>
+                    <ButtonContainer>
+                        <Button
+                            text="Sign in"
+                            color={theme.colors.white}
+                            onPress={() => navigation.navigate("Login")}
+                        />
+                        <Button
+                            text="Sign up"
+                            color={theme.colors.black}
+                            backgroundColor={theme.colors.white}
+                            onPress={() => navigation.navigate("Registration")}
+                        />
+                    </ButtonContainer>
+                </ContentContainer>
+            </Container>
+        </Wrapper>
+    );
 };

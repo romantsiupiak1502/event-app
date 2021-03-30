@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components';
 
 interface IButtonStyledProps {
@@ -15,18 +15,35 @@ const ButtonStyled = styled(TouchableOpacity)<IButtonStyledProps>`
 
 import { ButtonText } from "./Text";
 
-interface IButtonStyledProps {
+interface IButtonProps {
   text: string,
   onPress: () => void,
   color: string,
   backgroundColor?: string,
 }
 
-export const Button: React.FC<IButtonStyledProps> = props => {
+export const Button: React.FC<IButtonProps> = props => {
   const { text, onPress, color, backgroundColor } = props;
   return (
-    <ButtonStyled onPress={onPress} backgroundColor={backgroundColor}  color={''} text={''}>
+    <ButtonStyled onPress={onPress} backgroundColor={backgroundColor}>
       <ButtonText text={text} color={color}/>
     </ButtonStyled>
+  );
+};
+
+const SecondaryButtonStyled = styled(TouchableOpacity)<IButtonStyledProps>`
+  border-radius: 8px;
+  padding: 8px 24px;
+  margin-top: 16px;
+  align-items: center;
+  background-color: ${ ({ theme }) => theme.colors.primary };
+`;
+
+export const SecondaryButton: React.FC<IButtonProps> = props => {
+  const { text, onPress, color } = props;
+  return (
+    <SecondaryButtonStyled onPress={onPress}>
+      <ButtonText text={text} color={color}/>
+    </SecondaryButtonStyled>
   );
 };

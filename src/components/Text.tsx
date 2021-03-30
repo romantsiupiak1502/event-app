@@ -16,11 +16,6 @@ const TitleText = styled(Text)<ITextColorProps>`
   color: ${ ({ color, theme }) => color ? color : theme.colors.black }
 `;
 
-const ButtonTextStyled = styled(Text)<ITextColorProps>`
-  font-size: 20px;
-  color: ${ ({ color, theme }) => color ? color : theme.colors.black }
-`;
-
 interface ITextProps {
   text: string,
   color?: string,
@@ -31,6 +26,11 @@ export const Title: React.FC<ITextProps> = props => {
   return <TitleText color={color}>{text}</TitleText>
 };
 
+const ButtonTextStyled = styled(Text)<ITextColorProps>`
+  font-size: 20px;
+  color: ${ ({ color, theme }) => color ? color : theme.colors.black }
+`;
+
 export const ButtonText: React.FC<ITextProps> = props => {
   const { text, color } = props;
   return(
@@ -38,3 +38,14 @@ export const ButtonText: React.FC<ITextProps> = props => {
   );
 };
 
+const DefaultTextStyled = styled(Text)<ITextColorProps>`
+  font-size: 24px;
+  color: ${ ({ color, theme }) => color ? color : theme.colors.black }
+`;
+
+export const DefaultText: React.FC<ITextProps> = props => {
+  const { text, color } = props;
+  return (
+    <DefaultTextStyled color={color}>{text}</DefaultTextStyled>
+  );
+}
