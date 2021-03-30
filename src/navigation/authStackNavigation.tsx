@@ -1,17 +1,21 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import {createStackNavigator, StackNavigationProp} from '@react-navigation/stack';
 
 import { Greeting, Login, Registration } from '../containers';
 import { NavigationConst } from '../constants';
 
 const Stack = createStackNavigator();
 
-export type IStackNavigatorType = {
+type IStackNavigatorType = {
   Greeting: undefined,
   Login: undefined,
   Registration: undefined,
 };
+
+export interface IStackNavigationProps {
+  navigation: StackNavigationProp<IStackNavigatorType>;
+}
 
 export const AuthStackNavigation = () => {
   return(
