@@ -1,11 +1,10 @@
 import React from 'react';
 import {View} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
 
 import {greetingImage} from '../../assets';
 import {Title, Button, FlexImageBackground} from '../../components';
 import {theme, styled} from '../../styles';
-import {IStackNavigatorType} from '../../navigation';
+import {IStackNavigationProps} from '../../navigation';
 
 const Wrapper = styled(FlexImageBackground)`
   justify-content: flex-end;
@@ -31,8 +30,7 @@ const ButtonContainer = styled(View)`
   justify-content: space-between;
 `;
 
-interface IGreetingProps {
-    navigation: StackNavigationProp<IStackNavigatorType>;
+interface IGreetingProps extends IStackNavigationProps{
 }
 
 export const Greeting: React.FC<IGreetingProps> = props => {

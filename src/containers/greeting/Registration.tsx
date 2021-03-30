@@ -1,16 +1,14 @@
 import React from 'react';
-import {StackNavigationProp} from '@react-navigation/stack';
 import {Formik, Field} from 'formik';
 
 import {theme} from '../../styles';
-import {FlexImageBackground, IconTextButton, Title, InputField, SubmitButton, LeftArrow} from '../../components';
+import {FlexImageBackground, IconTextButton, Title, InputField, SecondaryButton, LeftArrow} from '../../components';
 import {loginImage} from '../../assets';
-import {IStackNavigatorType} from '../../navigation';
+import {IStackNavigationProps} from '../../navigation';
 
 import {Container, InputContainer} from './Login';
 
-interface IRegistrationProps {
-  navigation: StackNavigationProp<IStackNavigatorType>;
+interface IRegistrationProps extends IStackNavigationProps{
 }
 
 export const Registration: React.FC<IRegistrationProps> = props => {
@@ -60,7 +58,7 @@ export const Registration: React.FC<IRegistrationProps> = props => {
                 value={values.repeatPassword}
                 component={InputField}
               />
-              <SubmitButton text="Submit" onPress={handleSubmit} color={theme.colors.white}/>
+              <SecondaryButton text="Submit" onPress={handleSubmit} color={theme.colors.white}/>
             </InputContainer>
           )}
         </Formik>

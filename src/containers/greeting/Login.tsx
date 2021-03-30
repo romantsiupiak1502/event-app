@@ -1,12 +1,11 @@
 import React from 'react';
-import {StackNavigationProp} from '@react-navigation/stack';
 import {View} from 'react-native';
 import {Formik, Field} from 'formik';
 
 import {styled, theme} from '../../styles';
-import {FlexImageBackground, IconTextButton, Title, InputField, SubmitButton, LeftArrow} from '../../components';
+import {FlexImageBackground, IconTextButton, Title, InputField, SecondaryButton, LeftArrow} from '../../components';
 import {loginImage} from '../../assets';
-import {IStackNavigatorType} from '../../navigation';
+import {IStackNavigationProps } from '../../navigation';
 
 export const Container = styled(View)`
   align-items: center;
@@ -17,8 +16,7 @@ export const InputContainer = styled(View)`
   margin-top: 16px;
 `;
 
-interface ILoginProps {
-  navigation: StackNavigationProp<IStackNavigatorType>;
+interface ILoginProps extends IStackNavigationProps {
 }
 
 export const Login: React.FC<ILoginProps> = props => {
@@ -60,7 +58,7 @@ export const Login: React.FC<ILoginProps> = props => {
                 value={values.password}
                 component={InputField}
               />
-              <SubmitButton text="Submit" onPress={handleSubmit} color={theme.colors.white}/>
+              <SecondaryButton text="Submit" onPress={handleSubmit} color={theme.colors.white}/>
             </InputContainer>
           )}
         </Formik>
